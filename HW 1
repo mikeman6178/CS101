@@ -1,0 +1,95 @@
+HW 1
+
+1) Convert the following decimal (base 10) numbers into their binary equivalent:
+  a) 8                                                          
+  b) 15
+  c) 2048
+  d) 43416
+2) Convert the following binary numbers into their decimal (base 10) equivalent:
+  a) 10
+  b) 1001
+  c) 111011
+  d) 100000000
+3) What is a bit?
+4) How many bits are in a byte?
+5) What is the largest value that a byte can represent?
+6) Simplify the following boolean expressions:
+a) !((FALSE | FALSE) | (FALSE & TRUE))
+b) (TRUE | !(FALSE & (TRUE | FALSE)))
+c) (!FALSE & (!(FALSE | FALSE) & TRUE))
+
+Extra Credit: 
+Create a truth table for the following boolean algebra expressions:
+a) !(!(!(A & !(A & B)) & !(B & !(A & B))))
+b) !(!(A & B) & !(A | B))
+
+
+1a.) 1000
+1b.) 1111
+1c.) 0000100000000000
+1d.) 1010100110011000
+
+2a.) 2
+2b.) 9
+2c.) 59
+2d.) 256
+
+A bit is the most finite value in computer data. Its represented as a 1 or 0.
+There are 8 bits in a byte | 2 nibbles.
+11111111 = 255
+a.) True    b.) True      c.) True
+
+EXTRA CREDIT=
+
+A:     
+
+         A  B        !(!(!(A & !(A & B)) & !(B & !(A & B)))) 
+         T  F                   F
+         F  T                   T
+
+                           
+                !(!(!(A & !(A & B)) & !(B & !(A & B))))                
+      	     	      T      T    F        F       T    F
+                                 F                       F
+                   !(!(!(T  &  !(F)     &    !(F  & !(F))))
+                   !(!(!(T  &   T)      &    !(F  &  T)))
+                       !(!(!(T)           &        !(F)))
+                          !(!F            &          T))      
+                                          !(T)
+                                           F
+
+                       
+                !(!(!(A & !(A & B)) & !(B & !(A & B))))  
+      	                F      F    T        T       F    T
+                                 F                       F
+                   !(!(!(F  &  !(F)     &    !(T  & !(F))))
+                   !(!(!(F  &   T)      &    !(T  &  T)))
+                       !(!(!(F)           &        !(T)))
+                          !(!T            &          F))      
+                                          !(F)
+                                           T
+
+
+
+
+B:
+
+		A  B      !(!(A & B) & !(A | B))
+		T  F             T
+		F  T             T
+
+
+		 !(!(A & B) & !(A | B))                      
+  		   T    F       T    F
+   		 !(!(F)     &   !(T))
+  		    !(T      &    F)
+           		   !(F)
+            		    T
+
+
+		 !(!(A & B) & !(A | B)) 
+     		     F    T        F   T
+     		    !(!(F)     &   !(T))
+    		      !(T      &    F)
+          		      !(F)
+            		       T
